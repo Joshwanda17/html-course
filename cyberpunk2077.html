@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cyberpunk Homepage</title>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Orbitron', sans-serif;
+                background: #020202;
+                color: #fff;
+                overflow-x: hidden;
+            }
+
+            body::before {
+                content: "";
+                position: fixed;
+                inset: 0;
+                background: repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 2px, transparent 4px, transparent 6px);
+                pointer-events: none;
+                z-index: 20;
+            }
+
+            header {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                padding: 20px 50px;
+                background: rgba(5, 5, 5, 0.85);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 100;
+                box-shadow: 0 0 20px #fcee09;
+            }
+
+            .logo {
+                font-size: 28px;
+                font-weight: 700;
+                color: #fcee09;
+                text-shadow: 0 0 10px #fcee09;
+            }
+
+            nav a {
+                margin-left: 30px;
+                color: #00eaff;
+                text-decoration: none;
+                text-shadow: 0 0 8px #00eaff;
+                font-size: 14px;
+                transition: 0.3s;
+            }
+
+            nav a:hover {
+                color: #fcee09;
+                text-shadow: 0 0 15px #fcee09;
+            }
+
+            .hero {
+                height: 100vh;
+                background: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1400&q=60') center/cover no-repeat;
+                position: relative;
+            }
+            .hero-overlay {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+            }
+
+            .hero-content {
+                position: absolute;
+                top: 50%;
+                left: 100px;
+                transform: translateY(-50%);
+                max-width: 500px;
+            }
+            .hero-title {
+                font-size: 60px;
+                font-weight: 700;
+                line-height: 1.1;
+                color: #fcee09;
+                text-shadow: 0 0 20px #fcee09, 0 0 30px #00eaff;
+            }
+
+            .hero-sub {
+                margin-top: 20px;
+                font-size: 18px;
+                color: #00eaff;
+                text-shadow: 0 0 10px #00eaff;
+            }
+
+            .cta-btn {
+                margin-top: 35px;
+                padding: 15px 40px;
+                background: #fcee09;
+                border: none;
+                font-weight: 700;
+                cursor: pointer;
+                font-size: 18px;
+                text-transform: uppercase;
+                box-shadow: 0 0 25px #fcee09;
+                transition: 0.3s;
+            }
+
+            .cta-btn:hover {
+                background: #00eaff;
+                color: #000;
+                box-shadow: 0 0 25px #00eaff;
+                transform: scale(1.05)
+            }
+
+            .features {
+                padding: 100px;
+                background: #020202;
+            }
+
+            .secion-title {
+                font-size: 40px;
+                text-align: center;
+                margin-bottom: 60px;
+                color: #fcee09;
+                text-shadow: 0 0 15px #fcee09;
+            }
+
+            .feature-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+            }
+
+            .feature-box {
+                padding: 30px;
+                border: 3px solid #00eaff;
+                background: rgba(0 , 0, 0, 0.7);
+                border-radius: 12px;
+                box-shadow: 0 0 20px #00eaff;
+                transform: skewX(-3deg);
+                transition: 0.3s;
+            }
+
+            .feature-box:hover {
+                border-color: #fcee09;
+                box-shadow: 0 0 25px #fcee09;
+                transform: scale(1.05) skewX(-3deg);
+            }
+
+            .feature-title {
+                font-size: 22px;
+                color: #fcee09;
+                text-shadow: 0 0 10px #fcee09;
+                margin-bottom: 15px;
+            }
+
+            .feature-text {
+                font-size: 14px;
+                color: #9be8ff;
+            }
+
+            footer {
+                padding: 40px;
+                text-align: center;
+                background: #000;
+                border-top: 3px solid #fcee09;
+                box-shadow: 0 -5px 20px #fcee09;
+                color: #9be8ff;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">NIGHT CITY</div>
+
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">News</a>
+                <a href="#">Districts</a>
+                <a href="#">Blacklists</a>
+                <a href="#">Login</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to<br>Night City</h1>
+                <p class="hero-sub">Where chrome meets chaos. The future is now</p>
+                <button class="cta-btn">Enter The City</button>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2 class="section-title">Cyberpunk Features</h2>
+
+            <div class="feature-grid">
+                <div class="feature-box">
+                    <h3 class="feature-title"> Augmented Reality</h3>
+                    <p class="feature-text">Real-time overlays, HUD scanning, optic implants — all synced to your neural cloud.</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3 class="feature-title">Street Cred</h3>
+                    <p class="feature-text">Climb the ranks, fixers,mercs, cops - your reputation defines your future.</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3 class="feature-title">Black Market</h3>
+                    <p class="feature-text">Chrome upgrades, black-market cyberware, weapon mods - no questions asked.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            Night City Web // Cyberpunk 2077 Theme 2025
+        </footer>
+    </body>
+</html>
