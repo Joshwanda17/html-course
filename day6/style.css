@@ -1,0 +1,16 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+/*BODY*/
+body {
+    background: #0d0d0d;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/*NAVIGATION*/
